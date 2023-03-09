@@ -20,8 +20,7 @@ class MyApp extends StatelessWidget {
         colorSchemeSeed: Colors.indigo,
         useMaterial3: true,
       ),
-      routeInformationParser: ScreenRouter.router.routeInformationParser,
-      routerDelegate: ScreenRouter.router.routerDelegate,
+      routerConfig: ScreenRouter.router,
       debugShowCheckedModeBanner: false,
     );
   }
