@@ -12,15 +12,18 @@ class DetailPage extends StatelessWidget {
       ),
       body: Center(
         child: Column(
+          mainAxisSize: MainAxisSize.min,
           children: [
-            TextButton(
+            Text(GoRouter.of(context).location),
+            const SizedBox(height: 20),
+            ElevatedButton(
               onPressed: () {
                 context.push('/help');
               },
               child: const Text('push HelpPage'),
             ),
-            const SizedBox(height: 50),
-            TextButton(
+            const SizedBox(height: 20),
+            ElevatedButton(
               onPressed: () {
                 context.go('/help');
               },
