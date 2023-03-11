@@ -14,20 +14,38 @@ class DetailPage extends StatelessWidget {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            Text(GoRouter.of(context).location),
+            // Text(GoRouter.of(context).location),
             const SizedBox(height: 20),
+
+            /// go_router使用コード
+            // ElevatedButton(
+            //   onPressed: () {
+            //     context.push('/help');
+            //   },
+            //   child: const Text('push HelpPage'),
+            // ),
+            /// Navigator使用コード
             ElevatedButton(
               onPressed: () {
-                context.push('/help');
+                Navigator.pushNamed(context, '/help');
               },
               child: const Text('push HelpPage'),
             ),
             const SizedBox(height: 20),
+
+            /// go_router使用コード
+            // ElevatedButton(
+            //   onPressed: () {
+            //     context.go('/help');
+            //   },
+            //   child: const Text('go HelpPage'),
+            // ),
+            /// Navigator使用コード
             ElevatedButton(
               onPressed: () {
-                context.go('/help');
+                Navigator.pushReplacementNamed(context, '/help');
               },
-              child: const Text('go HelpPage'),
+              child: const Text('pushReplacementNamed HelpPage'),
             ),
           ],
         ),

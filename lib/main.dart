@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:riverpod_api_call_test/screen/screen_router.dart';
+import 'package:riverpod_api_call_test/screen/router.dart';
+import 'package:riverpod_api_call_test/screen/router_config.dart';
 
 void main() {
   runApp(
@@ -15,12 +16,23 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp.router(
+    /// go_router使用コード
+    // return MaterialApp.router(
+    //   theme: ThemeData(
+    //     colorSchemeSeed: Colors.indigo,
+    //     useMaterial3: true,
+    //   ),
+    //   routerConfig: MyRouterConfig.router,
+    //   debugShowCheckedModeBanner: false,
+    // );
+
+    /// Navigator使用コード
+    return MaterialApp(
       theme: ThemeData(
         colorSchemeSeed: Colors.indigo,
         useMaterial3: true,
       ),
-      routerConfig: ScreenRouter.router,
+      routes: MyRouter.router,
       debugShowCheckedModeBanner: false,
     );
   }

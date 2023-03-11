@@ -14,20 +14,38 @@ class HomePage extends StatelessWidget {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            Text(GoRouter.of(context).location),
+            // Text(GoRouter.of(context).location),
             const SizedBox(height: 20),
+
+            /// go_router使用コード
+            // ElevatedButton(
+            //   onPressed: () {
+            //     context.push('/detail');
+            //   },
+            //   child: const Text('push DetailPage'),
+            // ),
+            /// Navigator使用コード
             ElevatedButton(
               onPressed: () {
-                context.push('/detail');
+                Navigator.pushNamed(context, '/detail');
               },
               child: const Text('push DetailPage'),
             ),
             const SizedBox(height: 20),
+
+            /// go_router使用コード
+            // ElevatedButton(
+            //   onPressed: () {
+            //     context.go('/detail');
+            //   },
+            //   child: const Text('go DetailPage'),
+            // ),
+            /// Navigator使用コード
             ElevatedButton(
               onPressed: () {
-                context.go('/detail');
+                Navigator.pushReplacementNamed(context, '/detail');
               },
-              child: const Text('go DetailPage'),
+              child: const Text('pushReplacementNamed DetailPage'),
             ),
           ],
         ),

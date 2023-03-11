@@ -14,7 +14,11 @@ class HelpPage extends StatelessWidget {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            Text(GoRouter.of(context).location),
+            /// go_router使用コード
+            // Text(GoRouter.of(context).location),
+            /// Navigator使用コード
+            Text(Navigator.of(context).toString()),
+            Text(Navigator.of(context).runtimeType.toString()),
           ],
         ),
       ),
