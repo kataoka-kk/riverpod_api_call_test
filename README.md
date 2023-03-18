@@ -1,16 +1,14 @@
 # riverpod_api_call_test
 
-A new Flutter project.
+Riverpod の動作確認プロジェクト
 
-## Getting Started
+## 今回試したこと
 
-This project is a starting point for a Flutter application.
+・Android StudioにFlutter Riverpod Snippetsのプラグインを入れてみた。
+割と便利なので、プロジェクトでRiverpodを使用する場合は入れてた方がいい気がする
 
-A few resources to get you started if this is your first Flutter project:
+・StateProviderをStateNotifierProviderに依存させてみた。
+counter_page.dartとproviders.dartを見て。
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+・TODO StreamProviderとFutureProviderを試してみること
+・TODO StateProviderをStreamProviderとFutureProviderを依存させる

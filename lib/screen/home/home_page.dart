@@ -47,6 +47,15 @@ class HomePage extends StatelessWidget {
               },
               child: const Text('pushReplacementNamed DetailPage'),
             ),
+            const SizedBox(height: 20),
+
+            /// Navigator使用コード
+            ElevatedButton(
+              onPressed: () {
+                Navigator.pushNamed(context, '/counter');
+              },
+              child: const Text('pushNamed CounterPage'),
+            ),
           ],
         ),
       ),
