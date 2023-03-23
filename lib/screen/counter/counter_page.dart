@@ -32,7 +32,8 @@ class CounterPage extends ConsumerWidget {
             ElevatedButton(
               onPressed: () {
                 debugPrint(
-                    'init onPressed ${ref.read(x1Provider.notifier).state}');
+                  'init onPressed ${ref.read(x1Provider.notifier).state}',
+                );
                 ref.read(counterProvider.notifier).init();
               },
               child: const Text('init'),
